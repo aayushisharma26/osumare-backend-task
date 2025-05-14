@@ -72,6 +72,14 @@ app.use((err, req, res, next) => {
   res.status(500).json({ message: 'Internal server error', error: err.message });
 });
 
+
+
+app.get('/', (req, res) => {
+  res.send('Hello from Express app!');
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
+
+
